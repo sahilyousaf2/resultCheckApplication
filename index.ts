@@ -11,7 +11,8 @@ while (condition) {
         {
             name: 'marks',
             type: 'number',
-            message: chalk.greenBright.bold('Enter Your Marks'),
+            message: chalk.greenBright.bold('Enter Your Percentage : (Without Sign %)'),
+
         },
     ]);
 
@@ -30,17 +31,21 @@ while (condition) {
     else if (marksAns.marks >= 50 && marksAns.marks <= 59.9) {
         console.log(chalk.yellowBright.bold('\n \t Your Result Is D Grade \n'));;
     }
+    else if (marksAns.marks >= 40 && marksAns.marks <= 49.9) {
+        console.log(chalk.yellowBright.bold('\n \t Your Result Is F Grade \n'));;
+    }
     else {
         console.log(chalk.redBright.bold('\n \t You Are Faild \n'));
     }
-    let againAns=await inquirer.prompt([
+    let againAns = await inquirer.prompt([
         {
-            name:'again',
-            type:'confirm',
-            message:chalk.blueBright.bold('Do You Want Again Check Your Result'),
-            default:false
+            name: 'again',
+            type: 'confirm',
+            message: chalk.blueBright.bold('Do You Want Again Check Your Result'),
+            default: false
         }
     ])
-    condition=againAns.again
+    condition = againAns.again
 };
 console.log(chalk.grey.bold('\n \t Thanks You \n'));
+

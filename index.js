@@ -1,13 +1,13 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-console.log(chalk.magentaBright.bold('\n \t Welcome To codeWithSahil - Result Checker Application \n'));
+console.log(chalk.magentaBright.bold('\n \t Welcome To codeWithSahil - Result Check Application \n'));
 let condition = true;
 while (condition) {
     const marksAns = await inquirer.prompt([
         {
             name: 'marks',
             type: 'number',
-            message: chalk.greenBright.bold('Enter Your Marks'),
+            message: chalk.greenBright.bold('Enter Your Percentage : (Without Sign %)'),
         },
     ]);
     if (marksAns.marks >= 90 && marksAns.marks <= 100) {
@@ -27,6 +27,10 @@ while (condition) {
     }
     else if (marksAns.marks >= 50 && marksAns.marks <= 59.9) {
         console.log(chalk.yellowBright.bold('\n \t Your Result Is D Grade \n'));
+        ;
+    }
+    else if (marksAns.marks >= 40 && marksAns.marks <= 49.9) {
+        console.log(chalk.yellowBright.bold('\n \t Your Result Is F Grade \n'));
         ;
     }
     else {
