@@ -1,7 +1,7 @@
 {
   "name": "sy6-result-check-application",
   "version": "2.0.0",
-  "description": "",
+  "description": "Make A Cli Application For Check Percentage And Grade With Using Typescript, Node.js And Inquirer And Chalk",
   "main": "index.js",
   "type": "module",
   "bin": "index.js",
